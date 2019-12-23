@@ -1,6 +1,11 @@
 Designing This Blog
 Using just JS and JQuery
 
+interesting problem with append/load
+$(document).ready(function(){
+  $( "#post-list" ).append( "<li>Hallow!</li>", "<li>Buenos Tardes</li>" );
+  $( "#post-list" ).append( $( "li" ).load( "https://jgyaniv.github.io/posts/post0001.html #post-title" ) );
+});
 
 
 The Recurse Center Application Game
