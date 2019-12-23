@@ -1,4 +1,5 @@
-Github Pages Blog with just HTML, CSS, and JS
+Designing This Blog
+Using just JS and JQuery
 
 
 
