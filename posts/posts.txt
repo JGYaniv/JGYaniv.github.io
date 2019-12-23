@@ -1,0 +1,17 @@
+Github Pages Blog with just HTML, CSS, and JS
+
+
+
+The Recurse Center Application Game
+For my recurse center application I am writing a text-based RPG, about an aspiring programmer (*ahem*) who needs to prove his mettle.
+
+Like a typical RPG, you have a series of quests to accomplish, items to acquire, and levels to gain. In this game, the quests are my project ideas, the items are methods I have mastered, and the levels are gained by completing quests and "grinding" experience by completing exercises.
+
+This is a CLI game, where text is printed stating the game state and the user is queried to type an action or "help" to see a list of some possible actions (although not all). The action strings are parsed and a few instance variables for the game class track your game state.
+
+The game can be ended at any time by submitting your application and based on a set of parameters randomized within a range, it will or will not be accepted.
+
+Additional features can include:
+ - a calendar / deadline
+ - a compiler for actually solving problems or writing projects
+ - pulling project ideas or exercises from online sources (ie project Euler)
