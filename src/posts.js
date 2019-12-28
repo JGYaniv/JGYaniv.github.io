@@ -1,7 +1,7 @@
 let listUrl = "https://jgyaniv.github.io/posts/post-list.json";
 let samplePostUrl = "https://jgyaniv.github.io/posts/post0001.html";
 
-const addListItem = function(url){
+const renderPost = function(url){
   $.ajax({
   url: url,
   cache: false
@@ -15,18 +15,28 @@ const addListItem = function(url){
   })
 };
 
-const renderPosts = function() {
+const getPosts = function() {
   $.ajax({
     url: "https://jgyaniv.github.io/posts/post-list.json",
     dataType: "json",
     cache: false
-  }).done(function(json) {
-    json.posts.forEach((fileName) => addListItem(compileUrl(fileName)));
+  }).done(function(json){
+    let posts = json.posts;
+    renderPosts(posts);
+    console.log(posts.length);
   });
 };
+
+const renderPosts = function(array) {
+  renderPost(compileUrl(array[0]));
+  setTimeout(function() {renderPost(compileUrl(array[1]))}, 2);
+  // for(let i=0; i<2; i++){
+  //   renderPost(compileUrl(array[i]));
+  // }
+}
 
 const compileUrl = function(title){
   return `https://jgyaniv.github.io/posts/${title}.html`
 }
 
-renderPosts();
+getPosts();
