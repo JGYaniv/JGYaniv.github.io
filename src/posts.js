@@ -8,10 +8,9 @@ const renderPost = function(url){
   })
   .done(function(html) {
     let $html = $(html);
-    let url = samplePostUrl
     let title = $html.find("#post-title").prop('innerHTML');
     let description = $html.find("#post-description").prop('outerHTML');
-    $( "#post-list" ).append(`<li id='listed-post'><a href='${url}'>${title}</a>\n${description}</li>`);
+    $( `#${url.slice(-9,-5)}` ).append(`<div><id='listed-post'><a href='${url}'>${title}</a>\n${description}</div>`);
   })
 };
 
@@ -23,16 +22,13 @@ const getPosts = function() {
   }).done(function(json){
     let posts = json.posts;
     renderPosts(posts);
-    console.log(posts.length);
   });
 };
 
 const renderPosts = function(array) {
-  renderPost(compileUrl(array[0]));
-  setTimeout(function() {renderPost(compileUrl(array[1]))}, 2);
-  // for(let i=0; i<2; i++){
-  //   renderPost(compileUrl(array[i]));
-  // }
+  for(let i=0; i<2; i++){
+    renderPost(compileUrl(array[i]));
+  }
 }
 
 const compileUrl = function(title){
