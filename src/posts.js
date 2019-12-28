@@ -26,7 +26,7 @@ const getPosts = function() {
 };
 
 const renderPosts = function(array) {
-  for(let i=0; i<2; i++){
+  for(let i=0; i<array.length; i++){
     renderPost(compileUrl(array[i]));
   }
 }
