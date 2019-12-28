@@ -1,6 +1,10 @@
 #post-description {
   margin: 0;
   padding: 0;
-  color: red;
-  background-color: green;
+  color: gray;
+  font-style: italic;
+}
+
+#listed-post {
+  list-style-type: none
 }
