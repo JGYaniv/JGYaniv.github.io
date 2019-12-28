@@ -1,4 +1,0 @@
-<p id="post-title-list">
-post0001
-post0002
-</p>
