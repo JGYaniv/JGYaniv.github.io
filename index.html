@@ -1,20 +1,89 @@
+<!-- ./index.html -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <title>Jonathan Gil Yaniv's Blog</title>
     <meta charset="utf-8">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="./src/posts.js"></script>
+    <script src="./src/navigation.js" charset="utf-8"></script>
     <link rel="stylesheet" href="./css/blog.css">
   </head>
   <body>
-    <h1>Jonathan Gil Yaniv</h1>
-    <div id="posts">
-      <ol id="post-list">
-        <li id="0001"></li>
-        <li id='0002'></li>
-        <li id='0003'></li>
-      <li id='0004'></li></ol>
+
+    <!-- title -->
+
+    <a href="#home" class="site-name"><h1>JONATHAN GIL YANIV</h1></a>
+
+    <!-- Navigtion Bar -->
+
+    <nav>
+      <a href="#about" class="menu-item">About</a>
+      <a href="#portfolio" class="menu-item">Portfolio</a>
+      <a href="#blog" class="menu-item">Blog</a>
+      <a href="#contact" class="menu-item">Contact</a>
+    </nav>
+
+  <!-- body content for a specific page -->
+
+
+    <div class="page" id="about">
+      <h2>About me:</h2>
+      <p>This is my life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="page" id="portfolio">
+      <h2>Portfolio:</h2>
+      <li>BEAUTIFUL!</li>
+      <li>FABULOUS!</li>
+      <li>AMAZING!!!</li>
+    </div>
+
+    <div class="page" id="blog">
+      <h2>Blog:</h2>
+      <li>1. Wash</li>
+      <li>2. Rinse</li>
+      <li>3. Repeat</li>
+    </div>
+
+    <div class="page" id="contact">
+      <h2>Contact:</h2>
+      <p>[don't]</p>
+    </div>
+
+
+    <div class="page default" id="home">
+      <h2 style="justify:center;">Welcome to my home.</h2>
     </div>
   </body>
+
+
+  <!-- Social links -->
+  <footer>
+    <div class="footer">
+      <a href="https://www.facebook.com/jonathan.yaniv.5"
+        target="_blank">
+        <img class="social"
+          src="assets/images/icons/facebook.png"
+          alt="Fb"></a>
+      <a href="https://www.linkedin.com/in/jonathan-gil-yaniv-79a6776a/"
+        target="_blank">
+        <img class="social"
+          src="assets/images/icons/linkedin.svg"
+          alt="Li"></a>
+      <a href="https://twitter.com/jgyaniv"
+        target="_blank">
+        <img class="social"
+          src="assets/images/icons/twitter.png"
+          alt="Tw"></a>
+      <a href="https://github.com/JGYaniv"
+        target="_blank">
+        <img class="social"
+          src="assets/images/icons/github.png"
+          alt="Gh"></a>
+      <a href="https://www.instagram.com/jgyaniv/"
+        target="_blank">
+        <img class="social"
+          src="assets/images/icons/instagram.png"
+          alt="Ig"></a>
+    </div>
+  </footer>
 </html>

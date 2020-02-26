@@ -2,7 +2,6 @@ require 'json'
 require_relative './utilities.rb'
 require 'date'
 
-
 class Post
   def initialize
     path = File.expand_path('')

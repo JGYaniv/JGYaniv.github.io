@@ -1,0 +1,68 @@
+# index.html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Jonathan Gil Yaniv's Blog</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="./src/posts.js"></script>
+    <link rel="stylesheet" href="./css/blog.css">
+  </head>
+  <body>
+    <h3>Blog Posts:</h3>
+    <div id="posts">
+      <ol id="post-list">
+        <li id="0001"></li>
+        <li id='0002'></li>
+        <li id='0003'></li>
+      <li id='0004'></li></ol>
+    </div>
+  </body>
+</html>
+
+# posts/post-list.json
+{"posts":["post0001","post0002","post0003","post0004"]}
+
+# src/posts.js
+//files pushed to Github Pages are immediately published online!
+const listUrl = "https://jgyaniv.github.io/posts/post-list.json";
+
+//makes a JQuery Ajax HTTP GET request from the URL above, giving us our list of post file names.
+const getPosts = function() {
+  $.ajax({
+    url: listUrl,
+    dataType: "json",
+    cache: false //It's helpful for testing to disable loading the page from cache.
+  }).done(function(json){
+    let posts = json.posts;
+    renderPosts(posts); //renderPosts accepts an array of post file names and will iterate through them.
+  });
+};
+
+//iterates through the array of posts and calls the renderPost function on each one.
+const renderPosts = function(array) {
+  for(let i=0; i<array.length; i++){
+    renderPost(compileUrl(array[i])); //renderPost accepts the Post's URL as an argument.
+  }
+}
+
+//extracts the title and description from the post and appends it to the ordered list object.
+const renderPost = function(url){
+  $.ajax({
+  url: url,
+  cache: false
+  })
+  .done(function(html) {  //'html' is the variable assigned for the returned value of the request.
+    let $html = $(html);
+    let title = $html.find("#post-title").prop('innerHTML');//finds the paragraph with id 'post-title.'
+    let description = $html.find("#post-description").prop('outerHTML');//finds the paragraph with id 'post-description.'
+    $( `ol` ).append(`<li><id='listed-post'><a href='${url}'>${title}</a>\n${description}</li>`);//appends a list item.
+  })
+};
+
+//for readability just made this a separate function.
+const compileUrl = function(title){
+  return `https://jgyaniv.github.io/posts/${title}.html`
+}
+
+getPosts();

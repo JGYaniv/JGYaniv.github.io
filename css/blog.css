@@ -1,24 +1,92 @@
-#post-description {
-  margin: 0 0 10px 0;
-  padding: 0;
-  color: gray;
-  font-style: italic;
-}
-
-#post-list {
-  list-style-type: none;
-}
-
-div.album {
-  width: 80%;
-}
-
-img {
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-div.container {
+h1 {
   text-align: center;
-  padding: 10px 20px;
+  font-family: Helvetica;
+  text-decoration: none;
+  margin: 4% 0 2% 0;
+  font-size: 2em;
+  color: #373737;
+}
+
+.site-name {
+  text-decoration: none;
+}
+
+h1:hover {
+  opacity: 80%;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  justify-content: center;
+}
+
+
+nav {
+  display: flex;
+  width: 70%;
+  margin: 0 auto 0 auto;
+}
+
+a.menu-item {
+  display: inline-flex;
+  width: 100%;
+  font-size: 1em;
+  font-family: courier;
+  color: #949494;
+  text-decoration: none;
+  justify-content: center;
+}
+
+a.menu-item:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow: 0px 0.5px 1px rgba(0,0,0, 0.3);
+}
+
+a.selected-menu-item {
+  display: inline-flex;
+  width: 100%;
+  font-size: 1em;
+  font-family: courier;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow: 0px 0.5px 1px rgba(0,0,0, 0.3);
+}
+
+img.social {
+  height: 20px;
+  opacity: 80%;
+}
+img:hover {
+  opacity: 50%;
+}
+
+/* This hides all pages */
+.page {
+    display: none;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    justify-content: center;
+    font-family: arial;
+}
+
+/* This displays the first page */
+.default {
+    display: block;
+}
+
+/* This displays the page corresponding to the one you clicked on */
+:target {
+    display: block;
+}
+
+/* This hides the default page when another page is clicked */
+:target ~ .default {
+    display: none;
 }

@@ -4,31 +4,16 @@
   data-date="12-28-2019"
   data-order="0001"
   data-description="It's a first(found in data-description)">
-  <h3 id="post-title">The Blog Lives!!</h3>
+  <h3 id="post-title">Preserving List Order with JQuery Append</h3>
   <p id="post-description">
-    (long live the new blog!)
+    How to preserve the order of a list populated by aysnchronus javascript functions.
   </p>
   <div id="post-body">
-    <p>This is the most basic blog I could think of and its still pretty hacky.</p>
-    <p>Structure:</p>
-    <ul>
-      <li>post-list.json contains a list of post file names</li>
-      <li>index.html has a blank 'li' with an id corresponding to the post file name</li>
-      <li>posts.js compiles a url string based on the file name, runs an ajax query, and appends corresponding 'li'</li>
-     </ul>
-     <p>Next steps:</p>
-       <ul>
-         <li>add script that generates a new empty post with corresponding empty 'li' & json record</li>
-         <li>add some basic styling</li>
-         <li>make the site navigable</li>
-         <li>(eventually) create backend for adding and managing posts</li>
-       </ul>
-     <p>Snapshots:</p>
-     <div class="album">
-       <img src="../assets/images/122819/01.png" alt="01"></img>
-       <img src="../assets/images/122819/02.png" alt="02"></img>
-       <img src="../assets/images/122819/03.png" alt="03"></img>
-       <img src="../assets/images/122819/04.png" alt="04"></img>
-     </div>
+    <p>Hi world, this is my first blog post! Hope it's of some value to you dear reader!</p>
+    <p>When designing this GitHub Pages blog, I wanted to have the list of articles generated on the client side.</p>
+    <p>My idea was that I would use the JQuery Ajax method to call a JSON file with a list of all the blog post file names, and iterate through it appending the page with list items comprising each file's title and description. The problem when I implemented this methodology was that the posts would not appear in the correct order, in fact the order was constantly changing! This of course is because the JQuery functions are asynchronus and the list is populated in the order that they are loaded in stead of the order they appear in the JSON file.</p>
+    <p>My first test looked like this:</p>
+    <iframe src="https://giphy.com/embed/fTyA8wJwWYUqWxpjwG" width="480" height="394" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <div width="480px" height="394px" frameBorder="0" ><script src="https://gist.github.com/JGYaniv/6e384924b284630de0fdc695286b7c00.js"></script></div>
   </div>
 </div>
