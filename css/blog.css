@@ -29,9 +29,19 @@ footer {
   justify-content: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.navigation {
+  display: flex;
+  max-width: 600px;
+  right: 0;
+  left: 0;
+  margin: 0 auto 0 auto;
+}
 
 .navigation-bar {
-  display: flex;
   background: rgba(255,255,255,0.9);
   width: 100%;
 }
@@ -90,11 +100,11 @@ img.social:hover {
 }
 
 .default {
-    display: block;
+    display: flex;
 }
 
 :target {
-    display: block;
+    display: flex;
 }
 
 :target ~ .default {
@@ -104,14 +114,20 @@ img.social:hover {
 div.portfolio-box {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  transition: justify-content .5s;
 }
 
 img.portfolio-item {
-  max-width: 200px;
-  max-height: 200px;
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
 }
 
 figure {
-    align-content: center;
     text-align: center;
+    height: 150px;
+    width: 200px;
+    margin: 10px;
+    padding-bottom: 20px;
 }

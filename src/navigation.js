@@ -8,6 +8,16 @@ window.onload = function() {
   var header = document.getElementById("navigation");
   var sticky = header.offsetTop;
   window.onscroll = function() {stickyHeader(sticky, header)};
+
+  // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  //     anchor.addEventListener('click', function (e) {
+  //         e.preventDefault();
+  //
+  //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+  //             behavior: 'smooth'
+  //         });
+  //     });
+  // });
 }
 
 const setSelected = function(){
