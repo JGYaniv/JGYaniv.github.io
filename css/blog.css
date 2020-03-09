@@ -124,6 +124,10 @@ img.portfolio-item {
   object-fit: cover;
 }
 
+img.portfolio-item:hover {
+  opacity: 7  0%;
+}
+
 figure {
     text-align: center;
     height: 150px;
