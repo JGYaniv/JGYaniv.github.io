@@ -90,25 +90,13 @@ img.social:hover {
   opacity: 50%;
 }
 
-.page {
-    display: none;
+ .page {
+    /* display: none; */
     margin: 30px auto 30px auto;
     width: 80%;
     justify-content: center;
     font-family: arial;
     padding: 16px;
-}
-
-.default {
-    display: flex;
-}
-
-:target {
-    display: flex;
-}
-
-:target ~ .default {
-    display: none;
 }
 
 div.portfolio-box {
