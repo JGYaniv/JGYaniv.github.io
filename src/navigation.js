@@ -10,26 +10,26 @@ window.onload = function() {
   var sticky = header.offsetTop;
   window.onscroll = function() {stickyHeader(sticky, header)};
 
-  var links = document.querySelectorAll("#navigation a")
-for( link of links) {link.addEventListener("click",
-          changepage.bind(null, link.getAttribute("href") )
-        );
-      }
+//   var links = document.querySelectorAll("#navigation a")
+// for( link of links) {link.addEventListener("click",
+//           changepage.bind(null, link.getAttribute("href") )
+//         );
+//       }
 }
 
-function changepage(endpoint, event){ event.preventDefault();
-  var xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", appendResponse);
-  xhr.open("GET",endpoint_url[ endpoint ]);
-  xhr.responseType = 'document';
-  xhr.send();
-}
-
-function appendResponse() {
-  var tempContent = this.responseXML.getElementById("post").innerHTML;
-  console.log("//// response/// ", tempContent);
-  document.querySelector(".page").innerHTML = tempContent;
-}
+// function changepage(endpoint, event){ event.preventDefault();
+//   var xhr = new XMLHttpRequest();
+//   xhr.addEventListener("load", appendResponse);
+//   xhr.open("GET",endpoint_url[ endpoint ]);
+//   xhr.responseType = 'document';
+//   xhr.send();
+// }
+//
+// function appendResponse() {
+//   var tempContent = this.responseXML.getElementById("post").innerHTML;
+//   console.log("//// response/// ", tempContent);
+//   document.querySelector(".page").innerHTML = tempContent;
+// }
 
 // keeps header on top of page
 function stickyHeader(sticky, header) {
