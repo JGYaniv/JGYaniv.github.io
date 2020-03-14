@@ -17,6 +17,7 @@ function setListeners(){
   pages.forEach(function(page){
     $(`a[href='${page}']`).click(page, function(){
       event.preventDefault();
+      setSelected(page);
       getPage(page);
     });
   });
@@ -27,9 +28,22 @@ function getPage(page){
   $.ajax({
     url: `https://jgyaniv.github.io/${page}`,
     success: function(result){
-      $(".page").html(result);
+      $("#content").html(result);
     }
   })
+}
+
+function setSelected(page){
+  resetMenu();
+  var menuItem = document.querySelectorAll(`[href="${page}"]`)[0];
+  if (menuItem.className === 'menu-item') {
+    menuItem.setAttribute("class","selected menu-item");
+  }
+}
+
+const resetMenu = function(){
+  var menuItems = document.querySelectorAll(`[class="selected menu-item"]`);
+  menuItems.forEach(element => element.setAttribute("class", "menu-item"));
 }
 
 
