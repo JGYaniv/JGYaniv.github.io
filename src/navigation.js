@@ -9,27 +9,29 @@ window.onload = function() {
   var header = document.getElementById("navigation");
   var sticky = header.offsetTop;
   window.onscroll = function() {stickyHeader(sticky, header)};
-
-//   var links = document.querySelectorAll("#navigation a")
-// for( link of links) {link.addEventListener("click",
-//           changepage.bind(null, link.getAttribute("href") )
-//         );
-//       }
+  setListeners();
 }
 
-// function changepage(endpoint, event){ event.preventDefault();
-//   var xhr = new XMLHttpRequest();
-//   xhr.addEventListener("load", appendResponse);
-//   xhr.open("GET",endpoint_url[ endpoint ]);
-//   xhr.responseType = 'document';
-//   xhr.send();
-// }
-//
-// function appendResponse() {
-//   var tempContent = this.responseXML.getElementById("post").innerHTML;
-//   console.log("//// response/// ", tempContent);
-//   document.querySelector(".page").innerHTML = tempContent;
-// }
+function setListeners(){
+  const pages = ["about.html", "portfolio.html", "blog.html", "contact.html"];
+  pages.forEach(function(page){
+    $(`a[href='${page}']`).click(page, function(){
+      event.preventDefault();
+      getPage(page);
+    });
+  });
+}
+
+function getPage(page){
+  // event.preventDefault();
+  $.ajax({
+    url: `https://jgyaniv.github.io/${page}`,
+    success: function(result){
+      $(".page").html(result);
+    }
+  })
+}
+
 
 // keeps header on top of page
 function stickyHeader(sticky, header) {
@@ -41,13 +43,3 @@ function stickyHeader(sticky, header) {
     document.getElementById("content").setAttribute("style","margin-top:0;");
   }
 }
-
-
-//
-// function makeRequest( req_url ){
-//   var xhr = new XMLHttpRequest();
-//   xhr.addEventListener("load", appendResponse);
-//   xhr.open("GET","https://jgyaniv.github.io/posts/post0001.html");
-//   xhr.responseType = 'document';
-//   xhr.send();
-// }
