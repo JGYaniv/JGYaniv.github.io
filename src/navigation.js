@@ -1,47 +1,35 @@
-const endpoint_url = {
-  "portfolio.html": "https://jgyaniv.github.io/posts/post0001.html",
-  "about.html": "https://jgyaniv.github.io/posts/post0001.html",
-  "blog.html": "https://jgyaniv.github.io/posts/post0001.html",
-  "about.html": "https://jgyaniv.github.io/posts/post0001.html"
-};
-
 window.onload = function() {
   var header = document.getElementById("navigation");
   var sticky = header.offsetTop;
   window.onscroll = function() {stickyHeader(sticky, header)};
-  setListeners();
+  setSelected();
 }
 
-function setListeners(){
-  const pages = ["about.html", "portfolio.html", "blog.html", "contact.html"];
-  pages.forEach(function(page){
-    $(`a[href='${page}']`).click(page, function(){
-      event.preventDefault();
-      setSelected(page);
-      getPage(page);
-    });
-  });
+window.onhashchange = function(){
+  setSelected();
 }
 
 function getPage(page){
   // event.preventDefault();
   $.ajax({
-    url: `https://jgyaniv.github.io/${page}`,
+    url: `https://jgyaniv.github.io/${page.slice(1)}.html`,
     success: function(result){
       $("#content").html(result);
     }
   })
 }
 
-function setSelected(page){
+function setSelected(){
   resetMenu();
-  var menuItem = document.querySelectorAll(`[href="${page}"]`)[0];
+  var page = window.location.hash;
+  var menuItem = document.querySelector(`[href="${page}"]`);
   if (menuItem.className === 'menu-item') {
     menuItem.setAttribute("class","selected menu-item");
+    getPage(page);
   }
 }
 
-const resetMenu = function(){
+function resetMenu(){
   var menuItems = document.querySelectorAll(`[class="selected menu-item"]`);
   menuItems.forEach(element => element.setAttribute("class", "menu-item"));
 }
