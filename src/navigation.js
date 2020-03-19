@@ -25,8 +25,8 @@ function setSelected(){
   var menuItem = document.querySelector(`[href="${page}"]`);
   if (menuItem.className === 'menu-item') {
     menuItem.setAttribute("class","selected menu-item");
-    getPage(page);
   }
+  getPage(page);
 }
 
 function resetMenu(){
