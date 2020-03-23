@@ -130,3 +130,23 @@ figure {
 div.portfolio-item {
   text-align: center;
 }
+
+h2.portfolio-title {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+p.portfolio-subtitle {
+  margin-top: 5px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+figure.portfolio-page {
+  width: 100%;
+}
+
+figcaption.portfolio-page-header {
+  margin-bottom: 30px;
+}
