@@ -126,3 +126,7 @@ figure {
 }
 
 /* css for portfolio-item page */
+
+div.portfolio-item {
+  text-align: center;
+}

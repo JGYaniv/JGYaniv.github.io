@@ -1,5 +1,6 @@
 window.onload = function() {
   Navigation.stickyHeader();
+  Page.setByHash();
 }
 
 window.onhashchange = function() {
