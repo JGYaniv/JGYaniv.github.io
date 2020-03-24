@@ -38,7 +38,7 @@ class Navigation{
   static setSelected(){
     Navigation.resetMenu();
     var page = window.location.hash;
-    var menuItem = document.querySelector(`[href="${page}"`);
+    var menuItem = document.querySelector(`[href="${page}`);
     if (menuItem.className === 'menu-item') {
       menuItem.setAttribute("class","selected menu-item");
     }
