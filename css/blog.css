@@ -125,7 +125,7 @@ figure {
     padding-bottom: 20px;
 }
 
-/* css for portfolio-item page */
+/* portfolio-item page */
 
 div.portfolio-item {
   text-align: center;
@@ -150,3 +150,5 @@ figure.portfolio-page {
 figcaption.portfolio-page-header {
   margin-bottom: 30px;
 }
+
+/* blog posts */
