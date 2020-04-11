@@ -19,6 +19,7 @@ window.onload = function () {
     })();
 };
 
-function deflect(){
+const deflect = function(event){
+    event.preventDefault();
     alert(`Thanks for the feedback! ${randQuote(deflections)}`);
 }
