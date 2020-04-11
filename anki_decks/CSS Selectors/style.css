@@ -1,0 +1,16 @@
+body {
+    background-color:darkblue;
+    color:whitesmoke;
+}
+
+ul#authors > li:first-child {
+  background: red;
+}
+
+ul#dry-ingredient-list > li:nth-child(2n) {
+  background: red;
+}
+
+input[type="submit"]:hover {
+  background: red;
+}

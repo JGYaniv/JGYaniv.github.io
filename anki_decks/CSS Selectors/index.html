@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="deflect-button.js"></script>
+    </head>
+
+    <body>
+        <header id="header">
+            <p>Recipes by:</p>
+            <ul id="authors">
+                <li>Jonathan</li>
+                <li>Grandma</li>
+                <li>Kafele</li>
+            </ul>
+        </header>
+
+        <div id="ingredients">
+            <h2>Grandma's Bran Muffins</h2>
+            <h3>Dry Ingredients</h3>
+            <ul id="dry-ingredient-list">
+                <li>1 cup wheat bran</li>
+                <li>1 1/2 cups whole wheat pastry flour</li>
+                <li>1 tablespoon baking powder</li>
+                <li>1/4 teaspoon baking soda</li>
+                <li>1/2 tsp salt</li>
+                <li>1 1/2 tsp cinnamon</li>
+            </ul>
+            <h3>* Wet ingredients</h3>
+            <ul id="wet-ingredient-list">
+                <li>¼ cup brown sugar (or sub coconut sugar)</li>
+                <li>¼ cup blackstrap molasses</li>
+                <li>⅓ cup unsweetened applesauce</li>
+                <li>2 eggs</li>
+                <li>¾ cup unsweetened vanilla almond milk</li>
+                <li>1 tablespoon apple cider vinegar</li>
+                <li>⅓ cup melted and cooled coconut oil (or melted butter)</li>
+            </ul>
+        </div>
+
+        <section id="review">
+            <h2>Reviews</h2>
+            <form id="review-form" action="" method="post">
+
+                <label for="comment">Name</label>
+                <input id="comment" type="text" name="comment">
+
+                <!-- <label for="rating">Rating</label>
+                1<input type="radio" name="rating" value="1" checked>
+                2<input type="radio" name="rating" value="2">
+                3<input type="radio" name="rating" value="3">
+                4<input type="radio" name="rating" value="4">
+                5<input type="radio" name="rating" value="5"> -->
+
+                <select name="rating" id="rating-selector">
+                    <option value="--" disabled selected>--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <input type="submit" value="Submit Review">
+            </form>
+        </section>
+    </body>
+</html>
