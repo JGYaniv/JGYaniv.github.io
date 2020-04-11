@@ -14,3 +14,7 @@ ul#dry-ingredient-list > li:nth-child(2n) {
 input[type="submit"]:hover {
   background: red;
 }
+
+li {
+  list-style: none;
+}
