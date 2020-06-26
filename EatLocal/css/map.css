@@ -1,0 +1,162 @@
+#map {
+  height: 100%;
+  border-left: 1px solid black;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(246, 246, 246);
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  width: 380px;
+  box-sizing: border-box;
+  height: 35px;
+  z-index: 1;
+  margin:10px;
+  position: absolute;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#capture {
+    height: calc(100% - 180px);
+    box-sizing: border-box;
+    width: 400px;
+    overflow: hidden;
+    float: left;
+    background-color: rgb(246, 246, 246);
+    margin-top: 60px;
+    margin-bottom: 180px;
+    overflow-y: auto;
+}
+
+.map-detail-item{
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+  min-height:60px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid lightgray;
+  background-color: "";
+}
+.map-detail-item:hover{
+  background-color: lightblue;
+  cursor: pointer;
+}
+.map-detail-item .title{
+  font-weight: 600;
+}
+
+#pac-nav{
+  border-top: 1px lightgray solid;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 400px;
+}
+
+#location-details{
+    position: absolute;
+    background: rgb(246, 246, 246);
+    width: 400px;
+    height: calc(100% - 1px);
+    display: none;
+    margin-top: -60px;
+    box-sizing: border-box;
+    border-right: 1px solid #333;
+
+}
+
+#location-details button{
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  top: 340px;
+  background-color: #ffffff87;
+  border: 1px solid gray;
+  border-radius: 30%;
+  height: 40px;
+  width: 40px;
+}
+
+#location-details button:hover{
+  background-color: #add8e691;
+  cursor: pointer;
+}
+
+.details-header {
+  padding: 20px;
+}
+
+.details-header h1{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+.details-list {
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  padding: 20px;
+}
+
+.details-list div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.details-list img{
+  height: 35px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.details-list p{
+  margin: 0;
+}
+
+div.pac-container.pac-logo.hdpi::after{
+  display: none;
+}
