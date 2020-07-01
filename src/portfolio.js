@@ -1,14 +1,14 @@
-const displayPortfolio = function(name){
+// const displayPortfolio = function(name){
 
-}
+// }
 
 
-class PortfolioItem{
-  constructor() {
+// class PortfolioItem{
+//   constructor() {
 
-  }
+//   }
 
-  createPortfolioItemPage(){
+//   createPortfolioItemPage(){
 
-  }
-}
+//   }
+// }

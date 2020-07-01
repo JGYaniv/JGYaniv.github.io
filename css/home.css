@@ -1,0 +1,53 @@
+.gif {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.screenshot{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin: 5px 3rem;
+}
+
+.screenshot:hover{
+    background-color: white;
+    background:url('../assets/images/project_gifs/search_bar.gif');
+    background-size: cover;
+}
+
+.screenshot:hover img{
+    display:none;
+}
+
+.recent-project{
+    display: flex;
+}
+
+#home{
+    padding: 16px 50px;
+}
+
+.description{
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    justify-content: center;
+}
+
+.recent-project{
+    margin: 0 0 1rem 0;
+}
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+@media screen and (min-width: 800px) {
+  body {
+    background-color: lavender;
+  }
+} */

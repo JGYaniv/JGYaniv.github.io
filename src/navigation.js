@@ -27,7 +27,7 @@ class Navigation{
     window.onscroll = function() {
       if (window.pageYOffset >= (sticky-10)) {
         header.classList.add("sticky");
-        document.getElementById("content").setAttribute("style","margin-top:71px;");
+        document.getElementById("content").setAttribute("style","margin-top:35px;");
       } else {
         header.classList.remove("sticky");
         document.getElementById("content").setAttribute("style","margin-top:0;");

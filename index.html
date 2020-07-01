@@ -4,9 +4,12 @@
   <head>
     <title>Jonathan Gil Yaniv's Blog</title>
     <meta charset="utf-8" http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <script src="src/navigation.js" charset="utf-8"></script>
     <script src="src/portfolio.js" charset="utf-8"></script>
+    <script src="src/animations.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="css/blog.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
@@ -27,7 +30,37 @@
     <!-- body content for a specific page -->
     <div id="content">
       <div class="page" id="home">
-        <h2 style="justify:center;">Welcome to my home.</h2>
+        <div class="recent-project">
+          <div class="screenshot">
+            <img class="gif" src="assets/images/project_logos/artasks.png"/>
+          </div>
+          <div class="description">
+            <p>ArtAsk is platform for nonprofits to find artists to volunteer their talents. This was </p>
+            <div class="tech-icons">
+              <img src="assets/images/icons/nodejs_small.svg" alt="node">
+              <img src="assets/images/icons/react.svg" alt="react">
+              <img src="assets/images/icons/ruby.svg" alt="ruby">
+            </div>
+          </div>
+        </div>
+        <div class="recent-project">
+          <div class="screenshot">
+            <img class="gif" src="assets/images/project_logos/ftp.png"/>
+          </div>
+          <div class="description">
+            <p>FTP is an open source CRM for activists to send out a mass SMS securely.</p>
+            <!-- <ul>
+              <li>web portal for admins to manage users & contacts</li>
+              <li>hand rolled cipher based encrypytion algorithm for storing contact information</li>
+              <li>mobile app for activists to use in the field</li>
+            </ul> -->
+            <div class="tech-icons">
+              <img src="assets/images/icons/nodejs_small.svg" alt="node">
+              <img src="assets/images/icons/react.svg" alt="react">
+              <img src="assets/images/icons/ruby.svg" alt="ruby">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

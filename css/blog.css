@@ -3,6 +3,7 @@
 body {
   margin: 0 auto 0 auto;
   width: 80%;
+  max-width: 1200px;
 }
 
 h1 {
@@ -46,7 +47,8 @@ html {
 
 .navigation-bar {
   background: rgba(255,255,255,0.9);
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .sticky {
