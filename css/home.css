@@ -14,8 +14,24 @@
 
 .screenshot:hover{
     background-color: white;
-    background:url('../assets/images/project_gifs/search_bar.gif');
-    background-size: cover;
+}
+
+.artask:hover{
+  background: url('../assets/images/project_gifs/search_bar.gif');
+  background-size: cover;
+}
+
+.artask .gif {
+  max-height: 50%;
+}
+
+.ftp:hover{
+  background: url('../assets/images/project_gifs/ftp_contact_types.gif');
+  background-size: cover;
+}
+
+.ftp gif{
+  max-height: 100%;
 }
 
 .screenshot:hover img{
