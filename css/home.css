@@ -1,6 +1,19 @@
 .gif {
     max-width: 75%;
-    max-height: 75%;
+    max-height: 100%;
+}
+
+.contact-bar{
+  text-align: center;
+}
+
+.contact-bar a:first-child{
+  margin-right: 40px;
+}
+
+.contact-bar a{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .screenshot{
@@ -14,6 +27,33 @@
 
 .screenshot:hover{
     background-color: white;
+    /* cursor: pointer; */
+}
+
+button{
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+button:hover{
+  background-color:gray;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: mediumslateblue;
+  text-decoration: none;
+}
+
+a:hover{
+  color: darkblue;
+}
+
+.cta{
+  margin-bottom: 10px;
 }
 
 .artask:hover{
@@ -27,6 +67,11 @@
 
 .ftp:hover{
   background: url('../assets/images/project_gifs/ftp_contact_types.gif');
+  background-size: cover;
+}
+
+.eatlocal:hover{
+  background: url('../assets/images/project_gifs/eatlocal.gif');
   background-size: cover;
 }
 

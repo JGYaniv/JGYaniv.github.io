@@ -1,6 +1,7 @@
 window.onload = function() {
   Navigation.stickyHeader();
   Page.setByHash();
+  $(document).tooltip({ show: null });
 }
 
 window.onhashchange = function() {
@@ -41,6 +42,8 @@ class Navigation{
     var menuItem = document.querySelector(`[href="${page}`);
     if (menuItem.className === 'menu-item') {
       menuItem.setAttribute("class","selected menu-item");
+    } else {
+      document.querySelector("[href='/']").setAttribute("class", "selected menu-item")
     }
   }
 
