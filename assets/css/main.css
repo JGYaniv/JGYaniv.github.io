@@ -3375,18 +3375,8 @@ div.inner li a:hover{
 	color: #6f72ff;
 }
 
-#header a.logo {
-	cursor: text;
-}
-
-#header a.logo:hover {
-	cursor: text;
-}
-
 #header .logo span:hover {
 	color: #6f72ff;
-	cursor: text;
-
 }
 
 #main header h1:hover {
