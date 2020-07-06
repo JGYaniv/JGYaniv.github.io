@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -293,7 +294,7 @@ input, select, textarea {
 	hr {
 		border: 0;
 		border-bottom: solid 1px #c9c9c9;
-		margin: 2em 0;
+		margin: 3em 0;
 	}
 
 		hr.major {
@@ -2323,7 +2324,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 20%;
 		}
 
 			.image.left img, .image.right img {
@@ -2819,12 +2820,17 @@ input, select, textarea {
 					margin: 1.25em 0 0 1.25em;
 				}
 
-					.tiles article:hover > .image {
-						-moz-transform: scale(1.0);
-						-webkit-transform: scale(1.0);
-						-ms-transform: scale(1.0);
-						transform: scale(1.0);
-					}
+				.tiles article:hover > .image {
+					-moz-transform: scale(1.0);
+					-webkit-transform: scale(1.0);
+					-ms-transform: scale(1.0);
+					transform: scale(1.0);
+				}
+
+				.tiles article p {
+					display: none;
+				}
+
 
 		}
 
@@ -2837,6 +2843,10 @@ input, select, textarea {
 				.tiles article {
 					width: 100%;
 					margin: 1.25em 0 0 0;
+				}
+
+				.tiles article p {
+					display: none;
 				}
 
 		}
@@ -3166,7 +3176,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		padding: 0em 0 6em 0 ;
+		padding: 0em 0 3em 0 ;
 	}
 
 		@media screen and (max-width: 736px) {
@@ -3180,7 +3190,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 5em 0 6em 0 ;
+		padding: 5em 8em 0 8em ;
 		background-color: #f6f6f6;
 	}
 
@@ -3363,25 +3373,66 @@ div.inner li a{
 
 div.inner li a:hover{
 	color: #6f72ff;
-	/* text-decoration: underline; */
 }
 
 #header a.logo {
-	/* cursor: text; */
-	cursor: url('../../images/icons/cat-cursor.gif'), text;
+	cursor: text;
 }
 
 #header a.logo:hover {
-	/* cursor: text; */
-	cursor: url('../../images/icons/cat-cursor.gif');
+	cursor: text;
 }
 
 #header .logo span:hover {
 	color: #6f72ff;
-	cursor: url('../../images/icons/cat-cursor.gif');
+	cursor: text;
+
 }
 
 #main header h1:hover {
 	color: rgb(255, 147, 147);
-	cursor: url('../../images/icons/cat-cursor.gif');
+}
+
+#main .view-more {
+	text-align: center;
+	margin-top: 6rem;
+}
+
+#main .view-more a {
+	border: none;
+}
+
+.about-cta {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.col-1-1 {
+	max-width: 40%;
+	min-width: 300px;
+}
+
+.col-1-1 span {
+	justify-content: center;
+	width: 100%;
+	display: flex;
+}
+
+.col-1-2 {
+	max-width: 40%;
+	min-width: 300px;
+}
+
+.icongrid .style1 {
+	font-size: 2em;
+	padding: 5px;
+}
+
+.icongrid{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	letter-spacing: 0.5em;
 }
