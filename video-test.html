@@ -27,7 +27,7 @@
           devices.forEach(device => {
             const deviceEl = document.createElement('button');
             deviceEl.value = device.deviceId;
-            deviceEl.innerText = [device.kind, device.label, device.deviceId].join(":");
+            deviceEl.innerText = device.kind + " - " + device.label;
             deviceEl.onclick = clickHandler
             document.getElementById("devices").appendChild(deviceEl);
           })
