@@ -1,8 +1,18 @@
 <html>  
   <video id="video" autoplay=true controls=true></video>
   <button type="button" id="capture">Capture Stream</button>
-  <div id="devices"></select>
+  <div id="devices" ></select>
 </html>
+
+<style>
+  #devices{
+    flex-flow: column;
+    display: inline-flex;
+  }
+  #video{
+    width: 480px;
+  }
+</style>
 
 <script>
   const video = document.getElementById("video")
