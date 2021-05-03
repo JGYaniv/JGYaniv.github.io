@@ -16,8 +16,8 @@
         .then(devices => {
           devices.forEach(device => {
             const deviceEl = document.createElement('button');
-            console.log([device.kind, device.label, device.deviceId].join(":"))
             deviceEl.value = device.deviceId;
+            deviceEl.innerText = [device.kind, device.label, device.deviceId].join(":");
             deviceEl.onclick = clickHandler
             document.getElementById("devices").appendChild(deviceEl);
           })
@@ -27,7 +27,6 @@
   function clickHandler(e){
     e.preventDefault()
     console.log("changing to device: " + e.target.value)
-    console.log(e.target)
     navigator.mediaDevices.getUserMedia({ video: { deviceId: e.target.value } })
       .then(stream => document.getElementById("video").srcObject = stream)
       .catch(e => console.log(e));
